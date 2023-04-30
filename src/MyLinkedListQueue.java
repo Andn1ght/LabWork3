@@ -34,7 +34,7 @@ public class MyLinkedListQueue<E> implements QueueInterface<E> {
     }
 
     @Override
-    public int getSize() {
+    public int size() {
         return queue.size();
     }
 }

@@ -15,5 +15,5 @@ public interface QueueInterface<E> {
     boolean isEmpty();
 
     // Returns the number of elements in the queue.
-    int getSize();
+    int size();
 }
