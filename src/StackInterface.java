@@ -1,7 +1,7 @@
 public interface StackInterface<E> {
 
     // Returns the number of elements in the stack.
-    int getSize();
+    int size();
 
     // Returns the number of elements in the stack.
     boolean isEmpty();
