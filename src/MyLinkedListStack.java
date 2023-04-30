@@ -32,4 +32,9 @@ public class MyLinkedListStack<E> implements StackInterface<E> {
     public boolean isEmpty() {
         return myLinkedList.isEmpty();
     }
+
+    @Override
+    public int size() {
+        return myLinkedList.size();
+    }
 }
