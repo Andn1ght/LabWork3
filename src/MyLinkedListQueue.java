@@ -4,4 +4,9 @@ public class MyLinkedListQueue<E> implements QueueInterface<E> {
     public MyLinkedListQueue() {
         queue = new MyLinkedList<>();
     }
+
+    @Override
+    public void enqueue(E element) {
+        queue.addLast(element);
+    }
 }
