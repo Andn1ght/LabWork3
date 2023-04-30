@@ -11,15 +11,29 @@ import java.util.EmptyStackException;
 public class MyLinkedListStack<E> implements StackInterface<E> {
     private MyLinkedList<E> myLinkedList;
 
+    /**
+     * Constructs a new empty stack based on a linked list.
+     */
     public MyLinkedListStack(){
         myLinkedList = new MyLinkedList<>();
     }
 
+    /**
+     * Pushes the specified element onto the top of the stack.
+     *
+     * @param element the element to be pushed onto the stack
+     */
     @Override
     public void push(E element) {
         myLinkedList.addFirst(element);
     }
 
+    /**
+     * Removes and returns the element at the top of the stack.
+     *
+     * @return the element at the top of the stack
+     * @throws EmptyStackException if the stack is empty
+     */
     @Override
     public E pop() {
         if (isEmpty()) {
@@ -28,6 +42,12 @@ public class MyLinkedListStack<E> implements StackInterface<E> {
         return myLinkedList.removeFirst();
     }
 
+    /**
+     * Returns the element at the top of the stack without removing it.
+     *
+     * @return the element at the top of the stack
+     * @throws EmptyStackException if the stack is empty
+     */
     @Override
     public E peek() {
         if (isEmpty()) {
@@ -36,11 +56,21 @@ public class MyLinkedListStack<E> implements StackInterface<E> {
         return myLinkedList.getFirst();
     }
 
+    /**
+     * Returns true if the stack contains no elements.
+     *
+     * @return true if the stack contains no elements, false otherwise
+     */
     @Override
     public boolean isEmpty() {
         return myLinkedList.isEmpty();
     }
 
+    /**
+     * Returns the number of elements in the stack.
+     *
+     * @return the number of elements in the stack
+     */
     @Override
     public int size() {
         return myLinkedList.size();
