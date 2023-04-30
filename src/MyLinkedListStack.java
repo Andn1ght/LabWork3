@@ -27,4 +27,9 @@ public class MyLinkedListStack<E> implements StackInterface<E> {
         }
         return myLinkedList.getFirst();
     }
+
+    @Override
+    public boolean isEmpty() {
+        return myLinkedList.isEmpty();
+    }
 }
