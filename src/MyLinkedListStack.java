@@ -19,4 +19,12 @@ public class MyLinkedListStack<E> implements StackInterface<E> {
         }
         return myLinkedList.removeFirst();
     }
+
+    @Override
+    public E peek() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
+        }
+        return myLinkedList.getFirst();
+    }
 }
