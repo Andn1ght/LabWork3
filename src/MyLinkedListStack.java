@@ -9,7 +9,7 @@ import java.util.EmptyStackException;
  * @param <E> the type of elements stored in the stack
  */
 public class MyLinkedListStack<E> implements StackInterface<E> {
-    private MyLinkedList<E> myLinkedList;
+    private MyLinkedList<E> myLinkedList; // the linked list to implement the stack
 
     /**
      * Constructs a new empty stack based on a linked list.
@@ -25,7 +25,7 @@ public class MyLinkedListStack<E> implements StackInterface<E> {
      */
     @Override
     public void push(E element) {
-        myLinkedList.addFirst(element);
+        myLinkedList.addFirst(element); // add the element to the front of the linked list
     }
 
     /**
@@ -36,10 +36,10 @@ public class MyLinkedListStack<E> implements StackInterface<E> {
      */
     @Override
     public E pop() {
-        if (isEmpty()) {
-            throw new EmptyStackException();
+        if (isEmpty()) { // if the stack is empty
+            throw new EmptyStackException(); // throw an exception
         }
-        return myLinkedList.removeFirst();
+        return myLinkedList.removeFirst(); // remove and return the first element in the linked list
     }
 
     /**
@@ -50,10 +50,10 @@ public class MyLinkedListStack<E> implements StackInterface<E> {
      */
     @Override
     public E peek() {
-        if (isEmpty()) {
-            throw new EmptyStackException();
+        if (isEmpty()) { // if the stack is empty
+            throw new EmptyStackException(); // throw an exception
         }
-        return myLinkedList.getFirst();
+        return myLinkedList.getFirst(); // return the first element in the linked list
     }
 
     /**
@@ -63,7 +63,7 @@ public class MyLinkedListStack<E> implements StackInterface<E> {
      */
     @Override
     public boolean isEmpty() {
-        return myLinkedList.isEmpty();
+        return myLinkedList.isEmpty(); // return whether the linked list is empty
     }
 
     /**
@@ -73,6 +73,6 @@ public class MyLinkedListStack<E> implements StackInterface<E> {
      */
     @Override
     public int size() {
-        return myLinkedList.size();
+        return myLinkedList.size(); // return the size of the linked list
     }
 }
