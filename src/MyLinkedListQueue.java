@@ -32,4 +32,9 @@ public class MyLinkedListQueue<E> implements QueueInterface<E> {
     public boolean isEmpty() {
         return queue.isEmpty();
     }
+
+    @Override
+    public int getSize() {
+        return queue.size();
+    }
 }
