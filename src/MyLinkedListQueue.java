@@ -19,4 +19,12 @@ public class MyLinkedListQueue<E> implements QueueInterface<E> {
         }
         return queue.removeFirst();
     }
+
+    @Override
+    public E peek() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return queue.getFirst();
+    }
 }
