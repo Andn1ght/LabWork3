@@ -1,2 +1,2 @@
-public class MyLinkedListQueue {
+public class MyLinkedListQueue<E> implements QueueInterface<E> {
 }
