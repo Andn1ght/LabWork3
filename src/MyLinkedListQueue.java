@@ -27,4 +27,9 @@ public class MyLinkedListQueue<E> implements QueueInterface<E> {
         }
         return queue.getFirst();
     }
+
+    @Override
+    public boolean isEmpty() {
+        return queue.isEmpty();
+    }
 }
