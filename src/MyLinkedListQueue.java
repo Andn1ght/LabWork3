@@ -7,13 +7,13 @@ import java.util.NoSuchElementException;
  * @param <E> the type of elements in the queue
  */
 public class MyLinkedListQueue<E> implements QueueInterface<E> {
-    private MyLinkedList<E> queue;
+    private MyLinkedList<E> queue; // the linked list to implement the queue
 
     /**
      * Constructs an empty stack based on linked list.
      */
     public MyLinkedListQueue() {
-        queue = new MyLinkedList<>();
+        queue = new MyLinkedList<>(); // creates a new instance of MyLinkedList to be used as the queue implementation
     }
 
     /**
@@ -23,7 +23,7 @@ public class MyLinkedListQueue<E> implements QueueInterface<E> {
      */
     @Override
     public void enqueue(E element) {
-        queue.addLast(element);
+        queue.addLast(element); // adds the element to the end of the linked list
     }
 
     /**
@@ -34,10 +34,10 @@ public class MyLinkedListQueue<E> implements QueueInterface<E> {
      */
     @Override
     public E dequeue() {
-        if (isEmpty()) {
+        if (isEmpty()) { // if the queue is empty, throws NoSuchElementException
             throw new NoSuchElementException();
         }
-        return queue.removeFirst();
+        return queue.removeFirst(); // removes and returns the element at the front of the linked list
     }
 
     /**
@@ -48,10 +48,10 @@ public class MyLinkedListQueue<E> implements QueueInterface<E> {
      */
     @Override
     public E peek() {
-        if (isEmpty()) {
+        if (isEmpty()) { // if the queue is empty, throws NoSuchElementException
             throw new NoSuchElementException();
         }
-        return queue.getFirst();
+        return queue.getFirst(); // returns the element at the front of the linked list
     }
 
     /**
@@ -61,7 +61,7 @@ public class MyLinkedListQueue<E> implements QueueInterface<E> {
      */
     @Override
     public boolean isEmpty() {
-        return queue.isEmpty();
+        return queue.isEmpty(); // checks whether the linked list implementation of the queue is empty
     }
 
     /**
@@ -71,6 +71,6 @@ public class MyLinkedListQueue<E> implements QueueInterface<E> {
      */
     @Override
     public int size() {
-        return queue.size();
+        return queue.size(); // returns the size of the linked list implementation of the queue
     }
 }
